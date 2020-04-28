@@ -1,15 +1,14 @@
 class Question
   def initialize
-    @questionNumber = 1
     @number1 = rand(1..20)
     @number2 = rand(1..20)
   end
 
-  def answer(answer)
-    @number1 + @number2 == answer
+  def to_s
+    "What is the answer to: #{@number1} + #{@number2} = __?"
   end
 
-  def nextQuestion
-    @questionNumber += 1
+  def answer?(answer)
+    @number1 + @number2 == answer
   end
 end
